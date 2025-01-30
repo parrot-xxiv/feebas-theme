@@ -1,11 +1,11 @@
 <?php
 
-function remove_wp_block_library_css() {
-    wp_dequeue_style('wp-block-library');
-    wp_dequeue_style('wp-block-library-theme');
-    wp_dequeue_style('wc-block-style'); // For WooCommerce block styles.
-}
-add_action('wp_enqueue_scripts', 'remove_wp_block_library_css', 100);
+// function remove_wp_block_library_css() {
+//     wp_dequeue_style('wp-block-library');
+//     wp_dequeue_style('wp-block-library-theme');
+//     wp_dequeue_style('wc-block-style'); // For WooCommerce block styles.
+// }
+// add_action('wp_enqueue_scripts', 'remove_wp_block_library_css', 100);
 
 function disable_emojis() {
     remove_action('wp_head', 'print_emoji_detection_script', 7);
@@ -25,10 +25,10 @@ add_action('init', 'remove_wp_version');
 
 // add_filter('show_admin_bar', '__return_false');
 
-function deregister_scripts() {
-    wp_deregister_script('jquery'); // Removes bundled jQuery. Add your own if needed.
-}
-add_action('wp_enqueue_scripts', 'deregister_scripts');
+// function deregister_scripts() {
+//     wp_deregister_script('jquery'); // Removes bundled jQuery. Add your own if needed.
+// }
+// add_action('wp_enqueue_scripts', 'deregister_scripts');
 
 function clean_up_wp_head() {
     remove_action('wp_head', 'rsd_link');
@@ -58,8 +58,11 @@ add_action('wp_enqueue_scripts', 'enqueue_minimal_assets');
 function remove_dashboard_widgets() {
     remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
     remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side');
-    remove_meta_box('dashboard_primary', 'dashboard', 'side');
     remove_meta_box('dashboard_secondary', 'dashboard', 'side');
+    remove_meta_box('dashboard_activity', 'dashboard', 'normal');  // Activity Widget
+    remove_meta_box('dashboard_right_now', 'dashboard', 'normal'); // At a Glance Widget
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side'); // Quick Draft Widget
+    remove_meta_box('dashboard_primary', 'dashboard', 'side');     // WordPress News Widget
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
 
@@ -85,3 +88,36 @@ function unregister_default_widgets() {
     unregister_widget('WP_Widget_Recent_Comments');
 }
 add_action('widgets_init', 'unregister_default_widgets');
+
+function remove_default_post_type() {
+    remove_menu_page('edit.php'); // Remove "Posts" from admin menu
+}
+add_action('admin_menu', 'remove_default_post_type');
+
+function disable_comments_features() {
+    // Disable support for comments and trackbacks in all post types
+    foreach (get_post_types() as $post_type) {
+        remove_post_type_support($post_type, 'comments');
+        remove_post_type_support($post_type, 'trackbacks');
+    }
+}
+add_action('init', 'disable_comments_features');
+
+function remove_comments_admin_menu() {
+    remove_menu_page('edit-comments.php'); // Removes "Comments" from admin menu
+}
+add_action('admin_menu', 'remove_comments_admin_menu');
+
+function disable_comments_redirect() {
+    if (is_admin() && isset($_GET['page']) && $_GET['page'] === 'edit-comments.php') {
+        wp_redirect(admin_url());
+        exit;
+    }
+}
+add_action('admin_init', 'disable_comments_redirect');
+
+function remove_admin_bar_comments() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+}
+add_action('wp_before_admin_bar_render', 'remove_admin_bar_comments');
