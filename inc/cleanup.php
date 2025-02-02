@@ -49,12 +49,6 @@ function disable_theme_support() {
 }
 add_action('after_setup_theme', 'disable_theme_support');
 
-function enqueue_minimal_assets() {
-    wp_enqueue_style('theme-style', get_stylesheet_uri());
-    wp_enqueue_script('theme-script', get_template_directory_uri() . '/assets/js/main.js', [], false, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_minimal_assets');
-
 function remove_dashboard_widgets() {
     remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
     remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side');
