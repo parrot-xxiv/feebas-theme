@@ -119,3 +119,33 @@ function camera_bulk_updated_messages( $bulk_messages, $bulk_counts ) {
 }
 
 add_filter( 'bulk_post_updated_messages', 'camera_bulk_updated_messages', 10, 2 );
+
+// Add custom columns for weekly and daily prices
+function add_camera_columns( $columns ) {
+    $new_columns = array();
+    foreach ( $columns as $key => $value ) {
+        $new_columns[ $key ] = $value;
+        // Insert custom columns after the title column (or anywhere you prefer)
+        if ( 'title' === $key ) {
+            $new_columns['weekly_price'] = __( 'Weekly Price', 'camera-list' );
+            $new_columns['daily_price']  = __( 'Daily Price', 'camera-list' );
+        }
+    }
+    return $new_columns;
+}
+add_filter( 'manage_camera_posts_columns', 'add_camera_columns' );
+
+// Render the content for our custom columns
+function render_camera_columns( $column, $post_id ) {
+    if ( 'weekly_price' === $column ) {
+        $weekly_price = get_post_meta( $post_id, 'weekly_price', true );
+        echo $weekly_price ? esc_html( $weekly_price ) : '-';
+    }
+    if ( 'daily_price' === $column ) {
+        $daily_price = get_post_meta( $post_id, 'daily_price', true );
+        echo $daily_price ? esc_html( $daily_price ) : '-';
+    }
+}
+add_action( 'manage_camera_posts_custom_column', 'render_camera_columns', 10, 2 );
+
+
