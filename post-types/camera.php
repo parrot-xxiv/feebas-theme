@@ -1,5 +1,7 @@
 <?php
 
+include_once get_template_directory() . '/post-types/camera-metabox.php';
+
 /**
  * Registers the `camera` post type.
  */
@@ -38,7 +40,7 @@ function camera_init() {
 			'hierarchical'          => false,
 			'show_ui'               => true,
 			'show_in_nav_menus'     => true,
-			'supports'              => [ 'title', 'editor' ],
+			'supports'              => ['title'],
 			'has_archive'           => true,
 			'rewrite'               => true,
 			'query_var'             => true,
@@ -138,11 +140,11 @@ add_filter( 'manage_camera_posts_columns', 'add_camera_columns' );
 // Render the content for our custom columns
 function render_camera_columns( $column, $post_id ) {
     if ( 'weekly_price' === $column ) {
-        $weekly_price = get_post_meta( $post_id, 'weekly_price', true );
+        $weekly_price = get_post_meta( $post_id, 'weekly', true );
         echo $weekly_price ? esc_html( $weekly_price ) : '-';
     }
     if ( 'daily_price' === $column ) {
-        $daily_price = get_post_meta( $post_id, 'daily_price', true );
+        $daily_price = get_post_meta( $post_id, 'daily', true );
         echo $daily_price ? esc_html( $daily_price ) : '-';
     }
 }
