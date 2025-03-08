@@ -10,6 +10,8 @@ function type_init() {
 		'public'                => true,
 		'show_in_nav_menus'     => true,
 		'show_ui'               => true,
+		'show_in_quick_edit'	=> false, // added
+		'meta_box_cb'			=> false, // added
 		'show_admin_column'     => true, // updated to true
 		'query_var'             => true,
 		'rewrite'               => true,
