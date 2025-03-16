@@ -140,6 +140,30 @@ function add_camera_columns($columns)
 }
 add_filter('manage_camera_posts_columns', 'add_camera_columns');
 
+// Display the custom column data
+function camera_custom_column_content($column, $post_id) {
+    switch ($column) {
+        case 'daily_price':
+            $daily_price = get_post_meta($post_id, '_camera_daily_price', true);
+            if (!empty($daily_price)) {
+                echo '$' . number_format((float)$daily_price, 2);
+            } else {
+                echo '—';
+            }
+            break;
+            
+        case 'weekly_price':
+            $weekly_price = get_post_meta($post_id, '_camera_weekly_price', true);
+            if (!empty($weekly_price)) {
+                echo '$' . number_format((float)$weekly_price, 2);
+            } else {
+                echo '—';
+            }
+            break;
+    }
+}
+add_action('manage_camera_posts_custom_column', 'camera_custom_column_content', 10, 2);
+
 function remove_specific_quick_edit_fields(){
 	$screen = get_current_screen();
 
@@ -194,3 +218,35 @@ function remove_specific_quick_edit_fields(){
 }
 // Add JavaScript to remove specific quick edit fields
 add_action('admin_footer', 'remove_specific_quick_edit_fields');
+
+function add_camera_custom_meta_box() {
+    add_meta_box(
+        'camera_custom_buttons',
+        __( 'Custom Actions', 'camera-list' ),
+        'render_camera_custom_meta_box',
+        'camera',
+        'side', // or 'normal'
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'add_camera_custom_meta_box' );
+
+function render_camera_custom_meta_box( $post ) {
+    ?>
+    <div>
+        <button type="button" class="button" onclick="myCustomAction()">Action 1</button>
+        <button type="button" class="button" onclick="myOtherAction()">Action 2</button>
+    </div>
+    <script type="text/javascript">
+    function myCustomAction() {
+        alert('Action 1 triggered!');
+        // Place your AJAX or other custom code here.
+    }
+    function myOtherAction() {
+        alert('Action 2 triggered!');
+        // Place your AJAX or other custom code here.
+    }
+    </script>
+    <?php
+}
+
