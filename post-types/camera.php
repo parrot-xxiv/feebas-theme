@@ -1,6 +1,6 @@
 <?php
 
-include_once get_template_directory() . '/post-types/camera-metabox.php';
+require_once get_template_directory() . '/post-types/camera-metabox.php';
 
 /**
  * Registers the `camera` post type.
@@ -11,31 +11,31 @@ function camera_init()
 		'camera',
 		[
 			'labels'                => [
-				'name'                  => __('Cameras', 'custom-theme'),
-				'singular_name'         => __('Camera', 'custom-theme'),
-				'all_items'             => __('All Cameras', 'custom-theme'),
-				'archives'              => __('Camera Archives', 'custom-theme'),
-				'attributes'            => __('Camera Attributes', 'custom-theme'),
-				'insert_into_item'      => __('Insert into Camera', 'custom-theme'),
-				'uploaded_to_this_item' => __('Uploaded to this Camera', 'custom-theme'),
-				'featured_image'        => _x('Featured Image', 'camera', 'custom-theme'),
-				'set_featured_image'    => _x('Set featured image', 'camera', 'custom-theme'),
-				'remove_featured_image' => _x('Remove featured image', 'camera', 'custom-theme'),
-				'use_featured_image'    => _x('Use as featured image', 'camera', 'custom-theme'),
-				'filter_items_list'     => __('Filter Cameras list', 'custom-theme'),
-				'items_list_navigation' => __('Cameras list navigation', 'custom-theme'),
-				'items_list'            => __('Cameras list', 'custom-theme'),
-				'new_item'              => __('New Camera', 'custom-theme'),
-				'add_new'               => __('Add New', 'custom-theme'),
-				'add_new_item'          => __('Add New Camera', 'custom-theme'),
-				'edit_item'             => __('Edit Camera', 'custom-theme'),
-				'view_item'             => __('View Camera', 'custom-theme'),
-				'view_items'            => __('View Cameras', 'custom-theme'),
-				'search_items'          => __('Search Cameras', 'custom-theme'),
-				'not_found'             => __('No Cameras found', 'custom-theme'),
-				'not_found_in_trash'    => __('No Cameras found in trash', 'custom-theme'),
-				'parent_item_colon'     => __('Parent Camera:', 'custom-theme'),
-				'menu_name'             => __('Cameras', 'custom-theme'),
+				'name'                  => __('Cameras', 'feebas-theme'),
+				'singular_name'         => __('Camera', 'feebas-theme'),
+				'all_items'             => __('All Cameras', 'feebas-theme'),
+				'archives'              => __('Camera Archives', 'feebas-theme'),
+				'attributes'            => __('Camera Attributes', 'feebas-theme'),
+				'insert_into_item'      => __('Insert into Camera', 'feebas-theme'),
+				'uploaded_to_this_item' => __('Uploaded to this Camera', 'feebas-theme'),
+				'featured_image'        => _x('Featured Image', 'camera', 'feebas-theme'),
+				'set_featured_image'    => _x('Set featured image', 'camera', 'feebas-theme'),
+				'remove_featured_image' => _x('Remove featured image', 'camera', 'feebas-theme'),
+				'use_featured_image'    => _x('Use as featured image', 'camera', 'feebas-theme'),
+				'filter_items_list'     => __('Filter Cameras list', 'feebas-theme'),
+				'items_list_navigation' => __('Cameras list navigation', 'feebas-theme'),
+				'items_list'            => __('Cameras list', 'feebas-theme'),
+				'new_item'              => __('New Camera', 'feebas-theme'),
+				'add_new'               => __('Add New', 'feebas-theme'),
+				'add_new_item'          => __('Add New Camera', 'feebas-theme'),
+				'edit_item'             => __('Edit Camera', 'feebas-theme'),
+				'view_item'             => __('View Camera', 'feebas-theme'),
+				'view_items'            => __('View Cameras', 'feebas-theme'),
+				'search_items'          => __('Search Cameras', 'feebas-theme'),
+				'not_found'             => __('No Cameras found', 'feebas-theme'),
+				'not_found_in_trash'    => __('No Cameras found in trash', 'feebas-theme'),
+				'parent_item_colon'     => __('Parent Camera:', 'feebas-theme'),
+				'menu_name'             => __('Cameras', 'feebas-theme'),
 			],
 			'public'                => true,
 			'hierarchical'          => false,
@@ -54,6 +54,7 @@ function camera_init()
 	);
 }
 
+
 add_action('init', 'camera_init');
 
 /**
@@ -71,21 +72,21 @@ function camera_updated_messages($messages)
 	$messages['camera'] = [
 		0  => '', // Unused. Messages start at index 1.
 		/* translators: %s: post permalink */
-		1  => sprintf(__('Camera updated. <a target="_blank" href="%s">View Camera</a>', 'custom-theme'), esc_url($permalink)),
-		2  => __('Custom field updated.', 'custom-theme'),
-		3  => __('Custom field deleted.', 'custom-theme'),
-		4  => __('Camera updated.', 'custom-theme'),
+		1  => sprintf(__('Camera updated. <a target="_blank" href="%s">View Camera</a>', 'feebas-theme'), esc_url($permalink)),
+		2  => __('Custom field updated.', 'feebas-theme'),
+		3  => __('Custom field deleted.', 'feebas-theme'),
+		4  => __('Camera updated.', 'feebas-theme'),
 		/* translators: %s: date and time of the revision */
-		5  => isset($_GET['revision']) ? sprintf(__('Camera restored to revision from %s', 'custom-theme'), wp_post_revision_title((int) $_GET['revision'], false)) : false, // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		5  => isset($_GET['revision']) ? sprintf(__('Camera restored to revision from %s', 'feebas-theme'), wp_post_revision_title((int) $_GET['revision'], false)) : false, // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		/* translators: %s: post permalink */
-		6  => sprintf(__('Camera published. <a href="%s">View Camera</a>', 'custom-theme'), esc_url($permalink)),
-		7  => __('Camera saved.', 'custom-theme'),
+		6  => sprintf(__('Camera published. <a href="%s">View Camera</a>', 'feebas-theme'), esc_url($permalink)),
+		7  => __('Camera saved.', 'feebas-theme'),
 		/* translators: %s: post permalink */
-		8  => sprintf(__('Camera submitted. <a target="_blank" href="%s">Preview Camera</a>', 'custom-theme'), esc_url(add_query_arg('preview', 'true', $permalink))),
+		8  => sprintf(__('Camera submitted. <a target="_blank" href="%s">Preview Camera</a>', 'feebas-theme'), esc_url(add_query_arg('preview', 'true', $permalink))),
 		/* translators: 1: Publish box date format, see https://secure.php.net/date 2: Post permalink */
-		9  => sprintf(__('Camera scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Camera</a>', 'custom-theme'), date_i18n(__('M j, Y @ G:i', 'custom-theme'), strtotime($post->post_date)), esc_url($permalink)),
+		9  => sprintf(__('Camera scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Camera</a>', 'feebas-theme'), date_i18n(__('M j, Y @ G:i', 'feebas-theme'), strtotime($post->post_date)), esc_url($permalink)),
 		/* translators: %s: post permalink */
-		10 => sprintf(__('Camera draft updated. <a target="_blank" href="%s">Preview Camera</a>', 'custom-theme'), esc_url(add_query_arg('preview', 'true', $permalink))),
+		10 => sprintf(__('Camera draft updated. <a target="_blank" href="%s">Preview Camera</a>', 'feebas-theme'), esc_url(add_query_arg('preview', 'true', $permalink))),
 	];
 
 	return $messages;
@@ -107,16 +108,16 @@ function camera_bulk_updated_messages($bulk_messages, $bulk_counts)
 
 	$bulk_messages['camera'] = [
 		/* translators: %s: Number of Cameras. */
-		'updated'   => _n('%s Camera updated.', '%s Cameras updated.', $bulk_counts['updated'], 'custom-theme'),
-		'locked'    => (1 === $bulk_counts['locked']) ? __('1 Camera not updated, somebody is editing it.', 'custom-theme') :
+		'updated'   => _n('%s Camera updated.', '%s Cameras updated.', $bulk_counts['updated'], 'feebas-theme'),
+		'locked'    => (1 === $bulk_counts['locked']) ? __('1 Camera not updated, somebody is editing it.', 'feebas-theme') :
 			/* translators: %s: Number of Cameras. */
-			_n('%s Camera not updated, somebody is editing it.', '%s Cameras not updated, somebody is editing them.', $bulk_counts['locked'], 'custom-theme'),
+			_n('%s Camera not updated, somebody is editing it.', '%s Cameras not updated, somebody is editing them.', $bulk_counts['locked'], 'feebas-theme'),
 		/* translators: %s: Number of Cameras. */
-		'deleted'   => _n('%s Camera permanently deleted.', '%s Cameras permanently deleted.', $bulk_counts['deleted'], 'custom-theme'),
+		'deleted'   => _n('%s Camera permanently deleted.', '%s Cameras permanently deleted.', $bulk_counts['deleted'], 'feebas-theme'),
 		/* translators: %s: Number of Cameras. */
-		'trashed'   => _n('%s Camera moved to the Trash.', '%s Cameras moved to the Trash.', $bulk_counts['trashed'], 'custom-theme'),
+		'trashed'   => _n('%s Camera moved to the Trash.', '%s Cameras moved to the Trash.', $bulk_counts['trashed'], 'feebas-theme'),
 		/* translators: %s: Number of Cameras. */
-		'untrashed' => _n('%s Camera restored from the Trash.', '%s Cameras restored from the Trash.', $bulk_counts['untrashed'], 'custom-theme'),
+		'untrashed' => _n('%s Camera restored from the Trash.', '%s Cameras restored from the Trash.', $bulk_counts['untrashed'], 'feebas-theme'),
 	];
 
 	return $bulk_messages;
