@@ -1,0 +1,19 @@
+{
+    "name": "parrot-xxiv/feebas-theme",
+    "description": "Custom theme made from _S Boilerplate",
+    "autoload": {
+        "psr-4": {
+            "ParrotXxiv\\FeebasTheme\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "parrot-xxiv",
+            "email": "parrot-xxiv@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "make-pot": "wp i18n make-pot . languages/parrot-theme.pot"
+    }
+}
