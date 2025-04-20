@@ -46,7 +46,7 @@ function feebas_theme_setup()
 	// This theme uses wp_nav_menu() in one location.
 	// Register primary menu location
 	register_nav_menus(array(
-		'primary' => 'Primary Menu',
+		'header' => 'Header Menu',
 		'footer' => 'Footer Menu',
 	));
 
@@ -64,6 +64,9 @@ function feebas_theme_setup()
 			'flex-height' => true,
 		)
 	);
+
+	add_image_size('logo-small', 100, 50, false);
+	add_image_size('logo-large', 300, 150, false);
 }
 add_action('after_setup_theme', 'feebas_theme_setup');
 
