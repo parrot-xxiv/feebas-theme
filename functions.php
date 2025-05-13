@@ -60,6 +60,7 @@ function feebas_theme_setup()
 
 	add_image_size('logo-small', 100, 50, false);
 	add_image_size('logo-large', 300, 150, false);
+	add_image_size('custom300x200', 300, 200, true);
 }
 add_action('after_setup_theme', 'feebas_theme_setup');
 
@@ -117,6 +118,7 @@ add_action('wp_enqueue_scripts', 'feebas_theme_scripts');
 
 require_once get_template_directory() . '/inc/cleanup.php';
 require_once get_template_directory() . '/inc/admin-page.php';
+require_once get_template_directory() . '/inc/image-manager.php';
 require_once get_template_directory() . '/post-types/camera.php';
 require_once get_template_directory() . '/taxonomies/brand.php';
 require_once get_template_directory() . '/taxonomies/type.php';

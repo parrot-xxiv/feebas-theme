@@ -1,0 +1,105 @@
+/**
+ * Camera Admin Styles
+ */
+
+.camera-manager-wrap {
+    margin: 20px 0;
+}
+
+.camera-search-form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.camera-search-form input[type="text"] {
+    width: 300px;
+    margin-right: 10px;
+}
+
+.camera-items-table {
+    margin-top: 15px;
+}
+
+.camera-image-cell {
+    width: 120px;
+}
+
+.camera-image-preview {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+.camera-image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.no-image {
+    color: #999;
+    font-style: italic;
+}
+
+.camera-actions {
+    width: 200px;
+}
+
+.camera-actions .button {
+    margin-right: 5px;
+}
+
+.camera-actions .spinner {
+    float: none;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.camera-actions .update-message {
+    margin-top: 5px;
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.camera-actions .notice-success {
+    background-color: #ecf7ed;
+    color: #2a6f30;
+    border: 1px solid #c6e8ca;
+}
+
+.camera-actions .notice-error {
+    background-color: #fbeaea;
+    color: #a52626;
+    border: 1px solid #f5cbcb;
+}
+
+.camera-pagination {
+    margin-top: 20px;
+}
+
+.camera-pagination .page-numbers {
+    padding: 3px 8px;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.camera-pagination .page-numbers.current {
+    background-color: #2271b1;
+    color: #fff;
+    border-color: #2271b1;
+}
+
+tr .loading {
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+}
