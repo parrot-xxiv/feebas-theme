@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tw:watch": "tailwindcss -i ./assets/css/index.css -o ./assets/css/style.css --watch"
+    "tw:watch": "tailwindcss -i ./assets/css/index.css -o ./assets/css/style.css --watch",
+    "tw:build": "tailwindcss -i ./assets/css/index.css -o ./assets/css/style.css --minify"
   },
   "keywords": [],
   "author": "",
