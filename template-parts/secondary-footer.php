@@ -30,7 +30,7 @@
       </div>
 
       <!-- Newsletter Form -->
-      <form class="bg-white flex md:w-96 max-w-xl overflow-hidden rounded-full shadow-lg" method="post" action="#">
+      <form class="bg-white flex md:w-96 text-xs md:text-base max-w-xl overflow-hidden rounded-full shadow-lg" method="post" action="#">
         <input
           type="email"
           name="footer_email"
@@ -39,7 +39,7 @@
           class="flex-1 px-4 py-2 bg-white text-gray-800 placeholder-gray-400 focus:outline-none" />
         <button
           type="submit"
-          class="px-4 py-2 bg-gradient-to-r from-orange-400 to-red-500 text-white font-medium rounded-full hover:opacity-90 transition">
+          class="px-4 py-2 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-full hover:opacity-90 transition">
           Sign Up
         </button>
       </form>
