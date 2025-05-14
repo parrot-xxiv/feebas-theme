@@ -9,7 +9,7 @@
 <header id="secondary-header" class="bg-[#151515] shadow py-4 relative z-50">
   <div class="container mx-auto px-4 lg:px-0 flex items-center justify-between">
     <!-- Logo -->
-    <div class="flex-shrink-0">
+    <a href="/" class="flex-shrink-0">
       <?php
       $custom_logo_id = get_theme_mod('custom_logo');
       if ($custom_logo_id) {
@@ -23,7 +23,7 @@
              '</a>';
       }
       ?>
-    </div>
+    </a>
 
     <!-- Burger (mobile only) -->
     <div class="lg:hidden">
