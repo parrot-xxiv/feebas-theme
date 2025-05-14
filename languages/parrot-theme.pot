@@ -1,0 +1,459 @@
+# Copyright (C) 2025 Eldren Par
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Feebas Theme 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/feebas-theme\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-05-14T07:16:21+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: feebas-theme\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Feebas Theme"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A custom theme built from _s theme boilerplate."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Eldren Par"
+msgstr ""
+
+#: ajax/camera-list.php:79
+msgid "No cameras found matching your criteria."
+msgstr ""
+
+#: functions.php:89
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:91
+msgid "Add widgets here."
+msgstr ""
+
+#: post-types/camera.php:14
+#: post-types/camera.php:38
+msgid "Cameras"
+msgstr ""
+
+#: post-types/camera.php:15
+msgid "Camera"
+msgstr ""
+
+#: post-types/camera.php:16
+msgid "All Cameras"
+msgstr ""
+
+#: post-types/camera.php:17
+msgid "Camera Archives"
+msgstr ""
+
+#: post-types/camera.php:18
+msgid "Camera Attributes"
+msgstr ""
+
+#: post-types/camera.php:19
+msgid "Insert into Camera"
+msgstr ""
+
+#: post-types/camera.php:20
+msgid "Uploaded to this Camera"
+msgstr ""
+
+#: post-types/camera.php:21
+msgctxt "camera"
+msgid "Featured Image"
+msgstr ""
+
+#: post-types/camera.php:22
+msgctxt "camera"
+msgid "Set featured image"
+msgstr ""
+
+#: post-types/camera.php:23
+msgctxt "camera"
+msgid "Remove featured image"
+msgstr ""
+
+#: post-types/camera.php:24
+msgctxt "camera"
+msgid "Use as featured image"
+msgstr ""
+
+#: post-types/camera.php:25
+msgid "Filter Cameras list"
+msgstr ""
+
+#: post-types/camera.php:26
+msgid "Cameras list navigation"
+msgstr ""
+
+#: post-types/camera.php:27
+msgid "Cameras list"
+msgstr ""
+
+#: post-types/camera.php:28
+msgid "New Camera"
+msgstr ""
+
+#: post-types/camera.php:29
+msgid "Add New"
+msgstr ""
+
+#: post-types/camera.php:30
+msgid "Add New Camera"
+msgstr ""
+
+#: post-types/camera.php:31
+msgid "Edit Camera"
+msgstr ""
+
+#: post-types/camera.php:32
+msgid "View Camera"
+msgstr ""
+
+#: post-types/camera.php:33
+msgid "View Cameras"
+msgstr ""
+
+#: post-types/camera.php:34
+msgid "Search Cameras"
+msgstr ""
+
+#: post-types/camera.php:35
+msgid "No Cameras found"
+msgstr ""
+
+#: post-types/camera.php:36
+msgid "No Cameras found in trash"
+msgstr ""
+
+#: post-types/camera.php:37
+msgid "Parent Camera:"
+msgstr ""
+
+#. translators: %s: post permalink
+#: post-types/camera.php:75
+msgid "Camera updated. <a target=\"_blank\" href=\"%s\">View Camera</a>"
+msgstr ""
+
+#: post-types/camera.php:76
+msgid "Custom field updated."
+msgstr ""
+
+#: post-types/camera.php:77
+msgid "Custom field deleted."
+msgstr ""
+
+#: post-types/camera.php:78
+msgid "Camera updated."
+msgstr ""
+
+#. translators: %s: date and time of the revision
+#: post-types/camera.php:80
+msgid "Camera restored to revision from %s"
+msgstr ""
+
+#. translators: %s: post permalink
+#: post-types/camera.php:82
+msgid "Camera published. <a href=\"%s\">View Camera</a>"
+msgstr ""
+
+#: post-types/camera.php:83
+msgid "Camera saved."
+msgstr ""
+
+#. translators: %s: post permalink
+#: post-types/camera.php:85
+msgid "Camera submitted. <a target=\"_blank\" href=\"%s\">Preview Camera</a>"
+msgstr ""
+
+#. translators: 1: Publish box date format, see https://secure.php.net/date 2: Post permalink
+#: post-types/camera.php:87
+msgid "Camera scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview Camera</a>"
+msgstr ""
+
+#. translators: 1: Publish box date format, see https://secure.php.net/date 2: Post permalink
+#: post-types/camera.php:87
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#. translators: %s: post permalink
+#: post-types/camera.php:89
+msgid "Camera draft updated. <a target=\"_blank\" href=\"%s\">Preview Camera</a>"
+msgstr ""
+
+#. translators: %s: Number of Cameras.
+#: post-types/camera.php:111
+msgid "%s Camera updated."
+msgid_plural "%s Cameras updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: post-types/camera.php:112
+msgid "1 Camera not updated, somebody is editing it."
+msgstr ""
+
+#. translators: %s: Number of Cameras.
+#: post-types/camera.php:114
+msgid "%s Camera not updated, somebody is editing it."
+msgid_plural "%s Cameras not updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Number of Cameras.
+#: post-types/camera.php:116
+msgid "%s Camera permanently deleted."
+msgid_plural "%s Cameras permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Number of Cameras.
+#: post-types/camera.php:118
+msgid "%s Camera moved to the Trash."
+msgid_plural "%s Cameras moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Number of Cameras.
+#: post-types/camera.php:120
+msgid "%s Camera restored from the Trash."
+msgid_plural "%s Cameras restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: taxonomies/brand.php:26
+#: taxonomies/brand.php:43
+msgid "Brands"
+msgstr ""
+
+#: taxonomies/brand.php:27
+msgctxt "taxonomy general name"
+msgid "Brand"
+msgstr ""
+
+#: taxonomies/brand.php:28
+msgid "Search Brands"
+msgstr ""
+
+#: taxonomies/brand.php:29
+msgid "Popular Brands"
+msgstr ""
+
+#: taxonomies/brand.php:30
+msgid "All Brands"
+msgstr ""
+
+#: taxonomies/brand.php:31
+msgid "Parent Brand"
+msgstr ""
+
+#: taxonomies/brand.php:32
+msgid "Parent Brand:"
+msgstr ""
+
+#: taxonomies/brand.php:33
+msgid "Edit Brand"
+msgstr ""
+
+#: taxonomies/brand.php:34
+msgid "Update Brand"
+msgstr ""
+
+#: taxonomies/brand.php:35
+msgid "View Brand"
+msgstr ""
+
+#: taxonomies/brand.php:36
+msgid "Add New Brand"
+msgstr ""
+
+#: taxonomies/brand.php:37
+msgid "New Brand"
+msgstr ""
+
+#: taxonomies/brand.php:38
+msgid "Separate brands with commas"
+msgstr ""
+
+#: taxonomies/brand.php:39
+msgid "Add or remove brands"
+msgstr ""
+
+#: taxonomies/brand.php:40
+msgid "Choose from the most used brands"
+msgstr ""
+
+#: taxonomies/brand.php:41
+msgid "No brands found."
+msgstr ""
+
+#: taxonomies/brand.php:42
+msgid "No brands"
+msgstr ""
+
+#: taxonomies/brand.php:44
+msgid "Brands list navigation"
+msgstr ""
+
+#: taxonomies/brand.php:45
+msgid "Brands list"
+msgstr ""
+
+#: taxonomies/brand.php:46
+msgctxt "brand"
+msgid "Most Used"
+msgstr ""
+
+#: taxonomies/brand.php:47
+msgid "&larr; Back to Brands"
+msgstr ""
+
+#: taxonomies/brand.php:68
+msgid "Brand added."
+msgstr ""
+
+#: taxonomies/brand.php:69
+msgid "Brand deleted."
+msgstr ""
+
+#: taxonomies/brand.php:70
+msgid "Brand updated."
+msgstr ""
+
+#: taxonomies/brand.php:71
+msgid "Brand not added."
+msgstr ""
+
+#: taxonomies/brand.php:72
+msgid "Brand not updated."
+msgstr ""
+
+#: taxonomies/brand.php:73
+msgid "Brands deleted."
+msgstr ""
+
+#: taxonomies/type.php:25
+#: taxonomies/type.php:42
+msgid "Types"
+msgstr ""
+
+#: taxonomies/type.php:26
+msgctxt "taxonomy general name"
+msgid "Type"
+msgstr ""
+
+#: taxonomies/type.php:27
+msgid "Search Types"
+msgstr ""
+
+#: taxonomies/type.php:28
+msgid "Popular Types"
+msgstr ""
+
+#: taxonomies/type.php:29
+msgid "All Types"
+msgstr ""
+
+#: taxonomies/type.php:30
+msgid "Parent Type"
+msgstr ""
+
+#: taxonomies/type.php:31
+msgid "Parent Type:"
+msgstr ""
+
+#: taxonomies/type.php:32
+msgid "Edit Type"
+msgstr ""
+
+#: taxonomies/type.php:33
+msgid "Update Type"
+msgstr ""
+
+#: taxonomies/type.php:34
+msgid "View Type"
+msgstr ""
+
+#: taxonomies/type.php:35
+msgid "Add New Type"
+msgstr ""
+
+#: taxonomies/type.php:36
+msgid "New Type"
+msgstr ""
+
+#: taxonomies/type.php:37
+msgid "Separate types with commas"
+msgstr ""
+
+#: taxonomies/type.php:38
+msgid "Add or remove types"
+msgstr ""
+
+#: taxonomies/type.php:39
+msgid "Choose from the most used types"
+msgstr ""
+
+#: taxonomies/type.php:40
+msgid "No types found."
+msgstr ""
+
+#: taxonomies/type.php:41
+msgid "No types"
+msgstr ""
+
+#: taxonomies/type.php:43
+msgid "Types list navigation"
+msgstr ""
+
+#: taxonomies/type.php:44
+msgid "Types list"
+msgstr ""
+
+#: taxonomies/type.php:45
+msgctxt "type"
+msgid "Most Used"
+msgstr ""
+
+#: taxonomies/type.php:46
+msgid "&larr; Back to Types"
+msgstr ""
+
+#: taxonomies/type.php:67
+msgid "Type added."
+msgstr ""
+
+#: taxonomies/type.php:68
+msgid "Type deleted."
+msgstr ""
+
+#: taxonomies/type.php:69
+msgid "Type updated."
+msgstr ""
+
+#: taxonomies/type.php:70
+msgid "Type not added."
+msgstr ""
+
+#: taxonomies/type.php:71
+msgid "Type not updated."
+msgstr ""
+
+#: taxonomies/type.php:72
+msgid "Types deleted."
+msgstr ""
+
+#. Template Name of the theme
+msgid "My Custom Template"
+msgstr ""
