@@ -104,6 +104,7 @@ add_action('widgets_init', 'feebas_theme_widgets_init');
 function feebas_theme_scripts()
 {
 	wp_enqueue_style('feebas-theme-style', get_theme_file_uri('/assets/css/style.css'), array(), FEEBAS_THEME_VERSION);
+	wp_enqueue_style('feebas-theme-style-main', get_theme_file_uri('/style.css'), array(), FEEBAS_THEME_VERSION);
 	wp_style_add_data('feebas-theme-style', 'rtl', 'replace');
 
 	wp_enqueue_script('jquery');
